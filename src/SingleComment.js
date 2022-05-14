@@ -1,21 +1,21 @@
 import React from "react";
-import ProfilPic from './images/1pro.jfif';
 
-const SingleComment = () => {
+
+const SingleComment = (props) => {
     return(
         <div className = 'comment'>
             <a className = 'avatar' href="/">
-                <img src={ProfilPic}></img>
+                <img src={props.imgsr}></img>
             </a>
             <div className='content'>
-                <a className='author'>Maarley</a>
+                <a className='author'>{props.name}</a>
                 <div className='metadata'>
                 <span className='date'>
-                    Today at 5:00 pm 
+                    {props.timestamp} 
                 </span>
             </div>
             <div className = 'text'>
-                Perfectt eh !!!!
+                {props.content}
             </div>
             </div>
         </div>
